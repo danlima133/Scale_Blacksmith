@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://game_behavior/managers/DragDrop/objects/sensor_item.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/back_ground/objects/bau (1).png" type="Texture" id=2]
+[ext_resource path="res://game_behavior/objects_blacksmithing/behavior/texture_object.gd" type="Script" id=3]
+[ext_resource path="res://assets/back_ground/objects/highlighter/bau_selecionado.png" type="Texture" id=4]
+
+[node name="storage" type="Node2D"]
+
+[node name="texture" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+item_focus = ExtResource( 4 )
+
+[node name="sensor_item" parent="." instance=ExtResource( 1 )]
+my_type = 3
+texture_object = NodePath("../texture")
+
+[node name="shape" type="CollisionPolygon2D" parent="sensor_item"]
+polygon = PoolVector2Array( 4.5, -33.1, 4.5, -31.4, 11.5, -25.4, 11.5, -23, 17.5, -12.5, 17.5, -6.5, 12.5, -2.6, 12.5, -2, 17.5, 6.8, 17.5, 7.5, 14.3, 7.5, -6.5, 26.4, -6.5, 30.3, -10.7, 34.5, -17.3, 34.5, -17.5, -27.9, -9.5, -33.5, -9.5, -34.5, -2.5, -34.5 )
+
+[editable path="sensor_item"]

@@ -8,10 +8,41 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "DragDropData",
+"language": "GDScript",
+"path": "res://game_behavior/itens/behavior/item_object.gd"
+}, {
+"base": "Resource",
+"class": "MetaItem",
+"language": "GDScript",
+"path": "res://custom_data/ItemData.gd"
+}, {
+"base": "Node",
+"class": "itemDragDrop",
+"language": "GDScript",
+"path": "res://game_behavior/managers/DragDrop/behavior/managerDragDrop.gd"
+} ]
+_global_script_class_icons={
+"DragDropData": "",
+"MetaItem": "",
+"itemDragDrop": ""
+}
+
 [application]
 
 config/name="Scale Blacksmith"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=227
+window/size/height=128
+window/size/test_width=1024
+window/size/test_height=580
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
 
 [gui]
 

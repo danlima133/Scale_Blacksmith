@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/back_ground/objects/bigorna (1).png" type="Texture" id=1]
+[ext_resource path="res://game_behavior/managers/DragDrop/objects/sensor_item.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game_behavior/objects_blacksmithing/behavior/texture_object.gd" type="Script" id=3]
+[ext_resource path="res://assets/back_ground/objects/highlighter/bigorna_selecionada.png" type="Texture" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 26.1249
+
+[node name="anvil" type="Node2D"]
+
+[node name="texture_object" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+item_focus = ExtResource( 4 )
+
+[node name="sensor_item" parent="." instance=ExtResource( 2 )]
+texture_object = NodePath("../texture_object")
+
+[node name="pos_item" parent="sensor_item" index="0"]
+position = Vector2( -5, -9 )
+
+[node name="shape" type="CollisionShape2D" parent="sensor_item"]
+position = Vector2( -1, -7 )
+rotation = 1.70344
+shape = SubResource( 1 )
+
+[editable path="sensor_item"]

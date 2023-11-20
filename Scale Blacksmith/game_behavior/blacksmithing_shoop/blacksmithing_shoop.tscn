@@ -1,0 +1,51 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/back_ground/background.png" type="Texture" id=1]
+[ext_resource path="res://game_behavior/objects_blacksmithing/objects/table.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game_behavior/objects_blacksmithing/objects/anvil.tscn" type="PackedScene" id=3]
+[ext_resource path="res://game_behavior/itens/objects/item_object.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game_behavior/objects_blacksmithing/objects/storage.tscn" type="PackedScene" id=5]
+[ext_resource path="res://game_behavior/objects_blacksmithing/objects/sawyer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://game_behavior/objects_blacksmithing/objects/furnace.tscn" type="PackedScene" id=7]
+[ext_resource path="res://game_behavior/objects_blacksmithing/objects/miner.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/back_ground/objects/lamparina.png" type="Texture" id=9]
+
+[node name="blacksmithing_shoop" type="Node2D"]
+
+[node name="back_ground" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="lantern" type="Sprite" parent="."]
+position = Vector2( 33, 10 )
+texture = ExtResource( 9 )
+centered = false
+
+[node name="objects_interactives" type="Node2D" parent="."]
+
+[node name="anvil" parent="objects_interactives" instance=ExtResource( 3 )]
+position = Vector2( 52, 78 )
+
+[node name="table" parent="objects_interactives" instance=ExtResource( 2 )]
+position = Vector2( 159, 87 )
+
+[node name="storage" parent="objects_interactives" instance=ExtResource( 5 )]
+position = Vector2( 17, 76 )
+
+[node name="sawyer" parent="objects_interactives" instance=ExtResource( 6 )]
+position = Vector2( 38, 108 )
+
+[node name="furnace" parent="objects_interactives" instance=ExtResource( 7 )]
+position = Vector2( 193, 61 )
+
+[node name="miner" parent="objects_interactives" instance=ExtResource( 8 )]
+position = Vector2( 186, 104 )
+
+[node name="item_object3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 132, 53 )
+
+[node name="item_object4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 154, 53 )
